@@ -3,7 +3,9 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGODB_URI);
+    await mongoose.connect(
+      'mongodb+srv://photechitsolutions:CZaIxg4uSYRaIlMz@photechitsolutions.n6dgfdu.mongodb.net/photech-admin?retryWrites=true&w=majority&appName=PhoTechITSolutions'
+    );
     console.log('✅ MongoDB connected');
   } catch (error) {
     console.error('❌ MongoDB connection error:', error.message);
